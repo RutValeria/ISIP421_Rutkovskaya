@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISIP421_Rutkovskaya"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closing="MainWindow_Closing">
     <Grid Height="434" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"></RowDefinition>
@@ -17,5 +17,7 @@
                VerticalAlignment="Center" 
                HorizontalAlignment="Center" 
                Width="800"/>
+        <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Left" Margin="665,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="65" Height="25"/>
     </Grid>
 </Window>
