@@ -28,11 +28,12 @@
                 <ColumnDefinition Width="157*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Логин" Grid.Column="1" Grid.Row="1" Margin="0,0,0,44" Grid.RowSpan="2" />
-            <TextBox x:Name="TBoxLogin" TextChanged="TBoxLogin_TextChanged" ToolTip="Введите логин" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,44" Grid.RowSpan="2" />
-            <TextBlock Text="Логин или почта" Foreground="Gray" Name="txtHintLogin"  Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" FontFamily="Tahoma" FontSize="12pt" Margin="0,0,0,44" Grid.RowSpan="2"/>
 
-            <PasswordBox x:Name="TBoxPassword" DataContextChanged="TBoxPassword_DataContextChanged" ToolTip="Введите пароль" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,80" Grid.RowSpan="2" />
+            <TextBlock Text="Логин или почта" Foreground="Gray" Name="txtHintLogin"  Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" FontFamily="Tahoma" FontSize="12pt" Margin="0,0,0,44" Grid.RowSpan="2"/>
+            <TextBox x:Name="TBoxLogin" TextChanged="TBoxLogin_TextChanged" ToolTip="Введите логин" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,44" Grid.RowSpan="2" Background="Transparent"/>
+            
             <TextBlock Text="Пароль" Foreground="Gray" Name="txtHintPassword"  Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" TextAlignment="Center" FontFamily="Tahoma" FontSize="12pt" Margin="0,0,0,80" Grid.RowSpan="2"/>
+            <PasswordBox x:Name="TBoxPassword" PasswordChanged="TBoxPassword_PasswordChanged" ToolTip="Введите пароль" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,0,80" Grid.RowSpan="2" Background="Transparent"/>
 
             <Label Content="Пароль"  Grid.Row="3" Grid.Column="1" Margin="0,0,0,80" Grid.RowSpan="2"/>
             <Button Content="Вход" Grid.Column="2" Grid.Row="5" Margin="0,4,0,5"/>
