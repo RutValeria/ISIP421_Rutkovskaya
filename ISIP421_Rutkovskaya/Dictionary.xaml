@@ -6,8 +6,8 @@
         <Setter Property="Margin" Value="0"/>
         <Setter Property="FontFamily" Value="Tahoma"/>
         <Setter Property="FontSize" Value="12pt"/>
-        <Setter Property="Background" Value="#9938210A"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value = "#FFE0A9AF"/>
+        <Setter Property="Foreground" Value="Black"/>
 
     </Style>
     <Style TargetType="TextBlock">
