@@ -24,5 +24,22 @@ namespace ISIP421_Rutkovskaya.Pages
 		{
 			InitializeComponent();
 		}
-	}
+        private void TBoxLogin_TextChanged(object sender, RoutedEventArgs e)
+        {
+            txtHintLogin.Visibility = Visibility.Visible;
+            if (TBoxLogin.Text.Length > 0)
+            {
+                txtHintLogin.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void TBoxPassword_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            txtHintPassword.Visibility = Visibility.Visible;
+            if (TBoxPassword.Password.Length > 0)
+            {
+                txtHintPassword.Visibility = Visibility.Hidden;
+            }
+        }
+    }
 }
