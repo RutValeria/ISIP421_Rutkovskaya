@@ -18,7 +18,7 @@
                HorizontalAlignment="Center" 
                Width="800"
                Source="Pages/AuthPage.xaml"
-               Navigated="MainFrame_OnNavigated"/>
+               Navigated="MainFrame_OnNavigated" NavigationUIVisibility="Hidden"/>
         <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Left" Margin="635,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150"/>
         <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="65" Height="25" Click="ButtonBack_OnClick"/>
     </Grid>
