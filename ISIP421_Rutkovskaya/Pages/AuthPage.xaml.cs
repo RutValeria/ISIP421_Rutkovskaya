@@ -35,10 +35,10 @@ namespace ISIP421_Rutkovskaya.Pages
 
         private void TBoxPassword_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            txtHintPassword.Visibility = Visibility.Visible;
+			txtHintPassword.Visibility = Visibility.Visible;
             if (TBoxPassword.Password.Length > 0)
             {
-                txtHintPassword.Visibility = Visibility.Hidden;
+				txtHintPassword.Visibility = Visibility.Hidden;
             }
         }
     }
