@@ -12,8 +12,20 @@
     </Style>
     <Style TargetType="TextBlock">
         <Setter Property="FontSize" Value="12pt"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
     </Style>
     <Style TargetType="Label">
         <Setter Property="FontSize" Value="12pt"/>
+    </Style>
+    <Style TargetType="TextBox">
+        <Setter Property="FontSize" Value="12pt"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="PasswordBox">
+        <Setter Property="FontSize" Value="12pt"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
 </ResourceDictionary>

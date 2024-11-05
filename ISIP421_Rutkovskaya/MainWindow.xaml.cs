@@ -43,5 +43,22 @@ namespace ISIP421_Rutkovskaya
             if (result == MessageBoxResult.No)
                 e.Cancel = true;
         }
-    }
+
+		private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)
+		{
+            if (!(e.Content is Page page)) return;
+            this.Title = $"ProjectByRutBai - {page.Title}";
+
+            if (page is Pages.AuthPage)
+                ButtonBack.Visibility = Visibility.Hidden;
+            else
+                ButtonBack.Visibility = Visibility.Visible;
+
+		}
+
+		private void ButtonBack_OnClick(object sender, RoutedEventArgs e)
+		{
+            if(MainFrame.CanGoBack) MainFrame.GoBack();
+		}
+	}
 }

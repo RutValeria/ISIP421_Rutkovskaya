@@ -24,14 +24,14 @@ namespace ISIP421_Rutkovskaya.Pages
 		{
 			InitializeComponent();
 		}
-        private void TBoxLogin_TextChanged(object sender, RoutedEventArgs e)
-        {
-            txtHintLogin.Visibility = Visibility.Visible;
-            if (TBoxLogin.Text.Length > 0)
-            {
-                txtHintLogin.Visibility = Visibility.Hidden;
-            }
-        }
+		private void TBoxLogin_TextChanged(object sender, RoutedEventArgs e)
+		{
+			txtHintLogin.Visibility = Visibility.Visible;
+			if (TBoxLogin.Text.Length > 0)
+			{
+				txtHintLogin.Visibility = Visibility.Hidden;
+			}
+		}
 
 		private void TBoxPassword_PasswordChanged(object sender, RoutedEventArgs e)
 		{
@@ -39,6 +39,38 @@ namespace ISIP421_Rutkovskaya.Pages
 			if (TBoxPassword.Password.Length > 0)
 			{
 				txtHintPassword.Visibility = Visibility.Hidden;
+			}
+		}
+
+		private void ButtonEnter_OnClick(object sender, RoutedEventArgs e)
+		{
+			if (string.IsNullOrEmpty(TBoxLogin.Text) || string.IsNullOrEmpty(TBoxPassword.Password))
+			{
+				MessageBox.Show("Введите логин и пароль!");
+				return;
+			}
+
+			using (var db = new Entities())
+			{
+				var user = db.User
+					.AsNoTracking()
+					.FirstOrDefault(u => u.Login == TBoxLogin.Text && u.Password == TBoxPassword.Password);
+				if (user == null)
+				{
+					MessageBox.Show("Пользователь с такими данными не найден!");
+					return;
+				}
+				MessageBox.Show("Пользователь успешно найден!");
+
+				switch (user.Role)
+				{
+					case "Пользователь":
+						NavigationService?.Navigate(new UserPage());
+						break;
+					case "Администратор":
+						NavigationService?.Navigate(new AdminPage());
+						break;
+				}
 			}
 		}
 	}

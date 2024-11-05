@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISIP421_Rutkovskaya"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="MainWindow_Closing">
+        Title="MainWindow" Height="475" Width="815" Closing="MainWindow_Closing">
     <Grid Height="434" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"></RowDefinition>
@@ -17,8 +17,9 @@
                VerticalAlignment="Center" 
                HorizontalAlignment="Center" 
                Width="800"
-               Source="Pages/AuthPage.xaml"/>
+               Source="Pages/AuthPage.xaml"
+               Navigated="MainFrame_OnNavigated"/>
         <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Left" Margin="635,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150"/>
-        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="65" Height="25"/>
+        <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="65" Height="25" Click="ButtonBack_OnClick"/>
     </Grid>
 </Window>
