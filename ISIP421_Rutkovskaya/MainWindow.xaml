@@ -17,7 +17,7 @@
                VerticalAlignment="Center" 
                HorizontalAlignment="Center" 
                Width="800"/>
-        <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Left" Margin="665,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="120"/>
+        <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Left" Margin="635,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150"/>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="65" Height="25"/>
     </Grid>
 </Window>
