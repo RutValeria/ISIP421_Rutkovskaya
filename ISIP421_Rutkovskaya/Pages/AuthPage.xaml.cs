@@ -73,5 +73,9 @@ namespace ISIP421_Rutkovskaya.Pages
 				}
 			}
 		}
+		private void ButtonReg_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService?.Navigate(new RegPage());
+		}
 	}
 }

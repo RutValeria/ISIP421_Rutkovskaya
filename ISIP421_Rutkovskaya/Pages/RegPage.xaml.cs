@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,12 @@ namespace ISIP421_Rutkovskaya.Pages
 		public RegPage()
 		{
 			InitializeComponent();
+			CBoxRole.ItemsSource = new Role[]
+			{
+				new Role { Name = "Пользователь"},
+				new Role { Name = "Администратор"}
+			};
+			CBoxRole.SelectedIndex = 0;
 		}
 
 		private void TBoxPasswordRepeat_PasswordChanged(object sender, RoutedEventArgs e)
@@ -35,4 +42,8 @@ namespace ISIP421_Rutkovskaya.Pages
 
         }
     }
+	public class Role
+	{
+		public string Name { get; set; }
+	}
 }
