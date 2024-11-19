@@ -113,6 +113,11 @@ namespace ISIP421_Rutkovskaya.Pages
 				MessageBox.Show("Добавьте хотя бы одну цифру"); // выводим сообщение
 				return;
 			}
+			if (en && number)
+			{
+				MessageBox.Show("Пароль должен содержать анлийские буквы и цифры"); // выводим сообщение
+				return;
+			}
 				
 			if (TBoxPassword.Password != TBoxPasswordRepeat.Password) // проверка на совпадение
 			{
