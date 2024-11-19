@@ -28,4 +28,9 @@
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
+    <Style TargetType="ComboBox">
+        <Setter Property="FontSize" Value="12pt"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
 </ResourceDictionary>

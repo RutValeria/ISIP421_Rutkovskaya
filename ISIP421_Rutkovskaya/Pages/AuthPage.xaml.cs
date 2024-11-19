@@ -52,9 +52,10 @@ namespace ISIP421_Rutkovskaya.Pages
 
 			using (var db = new Entities())
 			{
+				var hashedPassword = RegPage.GetHash(TBoxPassword.Password);
 				var user = db.User
 					.AsNoTracking()
-					.FirstOrDefault(u => u.Login == TBoxLogin.Text && u.Password == TBoxPassword.Password);
+					.FirstOrDefault(u => u.Login == TBoxLogin.Text && u.Password == hashedPassword);
 				if (user == null)
 				{
 					MessageBox.Show("Пользователь с такими данными не найден!");

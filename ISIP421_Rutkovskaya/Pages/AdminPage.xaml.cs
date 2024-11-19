@@ -23,6 +23,17 @@ namespace ISIP421_Rutkovskaya.Pages
 		public AdminPage()
 		{
 			InitializeComponent();
+			DataGridUser.ItemsSource = Entities.GetContext().User.ToList();
+		}
+
+		private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+		{
+
+        }
+
+		private void ButtonDel_Click(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }
