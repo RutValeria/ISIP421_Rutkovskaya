@@ -21,9 +21,17 @@ namespace ISIP421_Rutkovskaya.Pages
 	public partial class AddUserPage : Page
 	{
 		private User _currentUser = new User();
-		public AddUserPage()
+		public AddUserPage(User selectedUser)
 		{
 			InitializeComponent();
+
+			if (selectedUser != null)
+			{
+				_currentUser = selectedUser;
+				cmbRole.Text = _currentUser.Role;
+			}
+				
+			
 			DataContext = _currentUser;
 		}
 
