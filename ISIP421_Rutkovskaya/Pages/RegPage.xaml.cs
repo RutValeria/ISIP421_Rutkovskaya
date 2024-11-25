@@ -96,16 +96,23 @@ namespace ISIP421_Rutkovskaya.Pages
 				return;
 			}
 			
-			bool en = true; // английская раскладка
+			bool en = false; // английская раскладка
 			bool number = false; // цифра
+			bool onlyEnglish = true; // только английские буквы
 			for (int i = 0; i < TBoxPassword.Password.Length; i++) // перебираем
 			{
-				if (TBoxPassword.Password[i] >= 'А' && TBoxPassword.Password[i] <= 'Я') en = false; // если русская раскладка
+				if (TBoxPassword.Password[i] >= 'А' && TBoxPassword.Password[i] <= 'Я') onlyEnglish = false; // если русская раскладка
 				if (TBoxPassword.Password[i] >= '0' && TBoxPassword.Password[i] <= '9') number = true; // если цифра
+				if ((TBoxPassword.Password[i] >= 'A' && TBoxPassword.Password[i] <= 'Z') || (TBoxPassword.Password[i] >= 'a' && TBoxPassword.Password[i] <= 'z')) en = true; // если английская буква  			
 			}
-			if (!en)
+			if (!onlyEnglish) // если найдены русские буквы
 			{
-				MessageBox.Show("Доступна только английская раскладка"); // выводим сообщение
+				MessageBox.Show("Доступна только английская раскладка");
+				return;
+			}
+			if (!en) // если нет английских букв
+			{
+				MessageBox.Show("Добавьте хотя бы одну английскую букву"); // выводим сообщение
 				return;
 			}
 			if (!number)
@@ -113,11 +120,12 @@ namespace ISIP421_Rutkovskaya.Pages
 				MessageBox.Show("Добавьте хотя бы одну цифру"); // выводим сообщение
 				return;
 			}
+			/*
 			if (en && number)
 			{
 				MessageBox.Show("Пароль должен содержать анлийские буквы и цифры"); // выводим сообщение
 				return;
-			}
+			}*/
 				
 			if (TBoxPassword.Password != TBoxPasswordRepeat.Password) // проверка на совпадение
 			{

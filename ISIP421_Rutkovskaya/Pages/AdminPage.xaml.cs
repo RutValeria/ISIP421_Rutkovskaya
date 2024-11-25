@@ -28,12 +28,21 @@ namespace ISIP421_Rutkovskaya.Pages
 
 		private void ButtonAdd_Click(object sender, RoutedEventArgs e)
 		{
-
-        }
+			NavigationService?.Navigate(new AddUserPage());
+		}
 
 		private void ButtonDel_Click(object sender, RoutedEventArgs e)
 		{
 
 		}
-	}
+
+		private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+		{
+			if (Visibility == Visibility.Visible)
+			{
+				Entities.GetContext().ChangeTracker.Entries().ToList().ForEach(x => x.Reload());
+				DataGridUser.ItemsSource = Entities.GetContext().User.ToList();
+			}
+        }
+    }
 }

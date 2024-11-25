@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:ISIP421_Rutkovskaya.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="344" d:DesignWidth="800"
-      Title="Администратор">
+      Title="Администратор" IsVisibleChanged="Page_IsVisibleChanged">
 
-    <Grid>
+    <Grid Background="#FFB5D5CA">
         <Grid.RowDefinitions>
             <RowDefinition Height="350*"/>
             <RowDefinition Height="120*"/>
