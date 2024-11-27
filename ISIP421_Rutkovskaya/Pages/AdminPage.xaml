@@ -15,11 +15,11 @@
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="0" Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="True" Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="100"/>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="80"/>
                 <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" Width="100"/>
                 <DataGridTextColumn Header="Роль" Binding="{Binding Role}" Width="100"/>
                 <DataGridTextColumn Header="Ф.И.О." Binding="{Binding FIO}" Width="200"/>
-                <DataGridTextColumn Header="Фото" Binding="{Binding Photo}" Width="100"/>
+                <DataGridTextColumn Header="Фото" Binding="{Binding Photo}" Width="150*"/>
 
                 <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
@@ -31,8 +31,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Grid.Row="1" Name="ButtonAdd" Content="Добавить" ToolTip="Добавить" HorizontalAlignment="Left" Click="ButtonAdd_Click" Margin="50,20,0,18" Width="100"/>
-        <Button Grid.Row="1" Name="ButtonDel" Content="Удалить" ToolTip="Удалить" HorizontalAlignment="Left" Click="ButtonDel_Click" Margin="650,20,0,18" Width="100"/>
+        <Button Grid.Row="1" Name="ButtonAdd" Content="Добавить" ToolTip="Добавить" HorizontalAlignment="Left" Click="ButtonAdd_Click" Margin="10" Width="100"/>
+        <Button Grid.Row="1" Name="ButtonDel" Content="Удалить" ToolTip="Удалить" HorizontalAlignment="Right" Click="ButtonDel_Click" Margin="10" Width="100"/>
 
     </Grid>
 </Page>
