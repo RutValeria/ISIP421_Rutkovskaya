@@ -11,21 +11,21 @@
     <Grid>
         <Grid Background="#FFB5D5CA">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="44"/>
                 <RowDefinition Height="44"/>
                 <RowDefinition Height="44"/>
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="44"/>
                 <RowDefinition Height="44"/>
-                <RowDefinition Height="91*"/>
+                <RowDefinition Height="91"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="137*"/>
-                <ColumnDefinition Width="138*"/>
-                <ColumnDefinition Width="240*"/>
-                <ColumnDefinition Width="128*"/>
-                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="137"/>
+                <ColumnDefinition Width="138"/>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width="128"/>
+                <ColumnDefinition Width="157"/>
             </Grid.ColumnDefinitions>
             <Label Content="Логин" Grid.Column="1" Grid.Row="1" Margin="0,0,0,44" Grid.RowSpan="2" />
 

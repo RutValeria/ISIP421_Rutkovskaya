@@ -13,7 +13,7 @@
             <RowDefinition Height="350*"/>
             <RowDefinition Height="120*"/>
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="True" Margin="10,10,10,10">
+        <DataGrid Grid.Row="0" Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="True" Margin="10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="100"/>
                 <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" Width="100"/>

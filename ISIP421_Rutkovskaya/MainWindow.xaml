@@ -6,20 +6,18 @@
         xmlns:local="clr-namespace:ISIP421_Rutkovskaya"
         mc:Ignorable="d"
         Title="MainWindow" Height="475" Width="815" Closing="MainWindow_Closing" Background="#FFFFFCD6">
-    <Grid Height="434" VerticalAlignment="Top">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="45"></RowDefinition>
         </Grid.RowDefinitions>
-        <Frame x:Name="MainFrame" Grid.Row="1" 
-               Height="344" 
+        <Frame x:Name="MainFrame" Grid.Row="1"  
                VerticalAlignment="Center" 
-               HorizontalAlignment="Center" 
-               Width="800"
+               HorizontalAlignment="Center"
                Source="Pages/AuthPage.xaml"
                Navigated="MainFrame_OnNavigated" NavigationUIVisibility="Hidden"/>
-        <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Left" Margin="635,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150"/>
+        <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="2" VerticalAlignment="Center" Width="150"/>
         <Button x:Name="ButtonBack" Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="65" Height="25" Click="ButtonBack_OnClick"/>
     </Grid>
 </Window>
